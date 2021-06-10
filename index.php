@@ -16,7 +16,7 @@
            {
                $link = file_get_contents("http://api.openweathermap.org/data/2.5/weather?q=".$city."&appid=92bf996fa39308dcbf535c72f2df92cd");
                 $weather_arr = json_decode($link,true);              
-                print_r($weather_arr);
+//                 print_r($weather_arr);
               
 
                   $wheather = "Weather is ".$weather_arr["weather"][0]["description"].". Tempratue is ".(intval($weather_arr["main"]["temp"])-273.15)."&#8451; . Atmoshpheric Pressure is ".$weather_arr["main"]["pressure"]." hPa. Wind Speed is ".$weather_arr["wind"]["speed"]." m/s. Cloudliness is ".$weather_arr["clouds"]["all"]." % .";
